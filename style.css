@@ -1,0 +1,585 @@
+/* ======================================================== */
+/*                  CONFIGURAÇÕES GERAIS                    */
+/* ======================================================== */
+html {
+    scroll-behavior: smooth; 
+    scroll-padding-top: 80px; 
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');
+
+@font-face {
+    font-family: 'Biro Script Plus';
+    src: url('biro-script-plus_freefontdownload_org/biro-script-plus.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #3a3230;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ======================================================== */
+/*                     CORES DAS SEÇÕES                     */
+/* ======================================================== */
+.secao-escura {
+    background-color: #3a3230;
+    color: #ffffff;
+}
+
+.secao-clara {
+    background-color: #ffffff;
+    color: #3a3230;
+}
+
+/* ======================================================== */
+/*                   MENU (CABEÇALHO)                       */
+/* ======================================================== */
+.topo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    position: sticky;
+    top: 0;
+    background-color: #3a3230;
+    z-index: 1000;
+}
+
+.topo .menu-navegacao {
+    display: flex;
+    gap: 25px;
+}
+
+.topo .menu-navegacao .link-pagina {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.4;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.topo .menu-navegacao .link-pagina:hover{
+    opacity: 0.8;
+}
+
+.topo .menu-navegacao .link-pagina.ativo {
+    opacity: 1 !important;
+    font-weight: 600 !important;
+    border-bottom: 2px solid #fff !important;
+    background: transparent !important;
+}
+
+/* ======================================================== */
+/*                    SEÇÃO 1: INÍCIO                       */
+/* ======================================================== */
+.container-perfil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 40px 10%;
+    min-height: calc(100vh - 80px); 
+}
+
+.foto-perfil {
+    width: 420px;
+    max-width: 35vw;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.bloco-perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 70px;
+    flex-grow: 1;
+    max-width: 700px;
+}
+
+.titulos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.titulos h1 {
+    font-family: 'Biro Script Plus', cursive, sans-serif;
+    font-size: 55px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.titulos h2 {
+    font-family: 'Eagle Lake', cursive, sans-serif;
+    font-size: 65px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.info-pessoal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-pessoal .nome {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.info-pessoal .cargo {
+    font-size: 16px;
+    color: #ddd;
+}
+
+.btn-contato {
+    color: #aaa;
+    text-decoration: underline;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* ======================================================== */
+/*                   SEÇÃO 2: SOBRE MIM                     */
+/* ======================================================== */
+.container-sobre {
+    display: flex;
+    flex-direction: column;
+    padding: 80px 15%;
+    gap: 40px;
+    min-height: 100vh;
+}
+
+.conteudo-sobre {
+    margin-left: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    max-width: 800px;
+}
+
+.texto-sobre p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+    text-align: justify;
+}
+
+.subsecao-sobre {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.subtitulo-sobre {
+    font-size: 20px;
+    color: #3a3230;
+    font-weight: 700;
+    padding-bottom: 6px;
+    width: fit-content;
+}
+
+/* Grid de Habilidades Técnicas */
+.grid-skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.skill-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #fcfaf9;
+    padding: 12px 18px;
+    border-radius: 10px;
+    border-left: 4px solid #3a3230;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.skill-card img {
+    width: 32px;
+    height: 32px;
+}
+
+.icone-texto {
+    font-weight: 700;
+    font-size: 16px;
+    color: #3a3230;
+    width: 32px;
+    text-align: center;
+}
+
+.skill-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-info strong {
+    font-size: 14px;
+    color: #3a3230;
+}
+
+.skill-info span {
+    font-size: 12px;
+    color: #777;
+}
+
+/* Grid de Idiomas */
+.grid-idiomas {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.idioma-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fcfaf9;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    min-width: 140px;
+    border: 1px solid #eee;
+}
+
+.idioma-card .flag {
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+.idioma-card strong {
+    font-size: 15px;
+    color: #3a3230;
+}
+
+.idioma-card span {
+    font-size: 12px;
+    color: #777;
+    margin-top: 2px;
+}
+
+/* Responsividade para Telas Menores */
+@media (max-width: 768px) {
+    .conteudo-sobre {
+        margin-left: 0;
+    }
+    .grid-idiomas {
+        justify-content: space-between;
+    }
+}
+/* ======================================================== */
+/*            SEÇÃO 3: PROJETOS E FORMAÇÕES                 */
+/* ======================================================== */
+.container-pf {
+    display: flex;
+    flex-direction: column;
+    padding: 80px 15%;
+    gap: 60px; 
+    min-height: 100vh;
+}
+
+.bloco-conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.lista-itens {
+    list-style: none;
+    margin-left: 80px; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.lista-itens li {
+    display: flex; 
+    align-items: center;
+    gap: 20px;
+    background-color: #fcfaf9; 
+    padding: 20px 30px;
+    border-radius: 12px; 
+    border-left: 5px solid #3a3230; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
+    transition: all 0.3s ease; 
+    font-size: 16px;
+    color: #444;
+}
+
+.lista-itens li:hover {
+    transform: translateX(10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.icone-card {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+}
+
+.icone-emoji {
+    font-size: 35px;
+    width: 45px;
+    text-align: center;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.info-item strong {
+    color: #3a3230;
+    font-size: 17px;
+}
+
+.info-item span {
+    font-size: 14px;
+    color: #666;
+}
+
+/* ======================================================== */
+/*                    SEÇÃO 4: CONTATO                      */
+/* ======================================================== */
+.container-contato {
+    display: flex;
+    flex-direction: column;
+    padding: 80px 15%;
+    gap: 50px;
+    min-height: 100vh;
+}
+
+.titulos-contato h2 {
+    font-family: 'Eagle Lake', cursive, sans-serif;
+    font-size: 55px;
+    font-weight: normal;
+    color: #ffffff;
+    line-height: 0.8;
+}
+
+.titulos-contato h3 {
+    font-family: 'Biro Script Plus', cursive, sans-serif;
+    font-size: 50px;
+    font-weight: normal;
+    color: #ffffff;
+    margin-left: 40px;
+}
+
+.grade-contatos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.cartao-contato {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #ffffff;
+    text-decoration: underline;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.cartao-contato:hover {
+    color: #ddd;
+    transform: translateY(-2px);
+}
+
+.cartao-contato svg {
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    padding: 5px;
+    width: 36px;
+    height: 36px;
+}
+
+/* ======================================================== */
+/*                  ANIMAÇÕES E EFEITOS                     */
+/* ======================================================== */
+.revelar {
+    opacity: 0;
+    transform: translateY(40px); 
+    transition: all 0.8s ease-out;
+}
+
+.revelar.ativo {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* ======================================================== */
+/*               GRID DE HABILIDADES (NOVA SEÇÃO)           */
+/* ======================================================== */
+.container-habilidades {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 15%;
+    gap: 30px;
+}
+
+.grid-habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-left: 80px;
+}
+
+.card-skill {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fcfaf9;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    font-weight: 600;
+    color: #3a3230;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.card-skill img {
+    width: 28px;
+    height: 28px;
+}
+
+.descricao-projeto {
+    font-size: 13px !important;
+    color: #666;
+    margin-top: 6px;
+    line-height: 1.4;
+}
+
+.acoes-hero {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.btn-cv {
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-cv:hover {
+    background-color: #fff;
+    color: #3a3230;
+}
+/* ======================================================== */
+/*               RESPONSIVIDADE (TABLETS E CELULARES)       */
+/* ======================================================== */
+
+@media (max-width: 768px) {
+    /* 1. Ajuste do Menu Superior */
+    .topo {
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+    .topo .menu-navegacao {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* 2. Ajuste dos Espaçamentos Gerais das Seções */
+    .container-perfil,
+    .container-sobre,
+    .container-pf,
+    .container-contato,
+    .container-habilidades {
+        padding: 40px 5%; /* Reduz as bordas laterais gigantes */
+        min-height: auto;
+    }
+
+    /* 3. Seção 1: Início (Foto e Textos) */
+    .container-perfil {
+        flex-direction: column-reverse; /* Coloca o texto em cima e a foto embaixo (ou use 'column' para o inverso) */
+        text-align: center;
+        gap: 30px;
+    }
+    .foto-perfil {
+        width: 100%;
+        max-width: 300px;
+    }
+    .titulos h1 {
+        font-size: 35px; /* Reduz o tamanho da fonte */
+    }
+    .titulos h2 {
+        font-size: 45px;
+    }
+
+    /* 4. Títulos das Seções (Sobre, Projetos, Contato) */
+    .titulos-secao h2 {
+        font-size: 40px;
+    }
+    .titulos-secao h3 {
+        font-size: 35px;
+        margin-left: 15px;
+    }
+
+    /* 5. Alinhamento de Textos e Listas (Removendo o recuo esquerdo) */
+    .texto-sobre,
+    .conteudo-sobre,
+    .lista-itens,
+    .grid-habilidades {
+        margin-left: 0; /* Remove a margem esquerda de 80px que empurrava o texto para fora da tela */
+    }
+
+    /* 6. Ajuste dos Cards de Projetos e Formações */
+    .lista-itens li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 20px;
+    }
+    
+    /* 7. Ajuste dos Cartões de Contato */
+    .grade-contatos {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+}
